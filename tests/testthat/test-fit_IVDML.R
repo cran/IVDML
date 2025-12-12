@@ -109,6 +109,43 @@ test_that("fit_IVDML raises error when ml_par is set inconsistently.", {
 })
 
 
+test_that("ml methods work without specifying ml_par", {
+  set.seed(1)
+  n <- 20
+  X <- cbind(rnorm(n), rnorm(n))
+  Y <- abs(X[, 1]) + 0.5 * rnorm(n)
+  Xnew <- cbind(rnorm(n), rnorm(n))
+  fit_par_gam <- tune_gam(Y, X, ml_par = list())
+  fit_par_xgb <- tune_xgboost(Y, X, ml_par = list())
+  fit_par_randomForest <- tune_randomForest(Y, X, ml_par = list())
+  fitted_gam <- fit_gam(Y, X, fit_par_gam)
+  fitted_xgb <- fit_xgboost(Y, X, fit_par_xgb)
+  fitted_randomForest <- fit_randomForest(Y, X, fit_par_randomForest)
+  pred_gam <- predict_gam(Xnew, fitted_gam)
+  pred_xgb <- predict_xgboost(Xnew, fitted_xgb)
+  pred_randomForest <- predict_randomForest(Xnew, fitted_randomForest)
+})
 
 
+test_that("ml_methods work with specifying ml_par", {
+  set.seed(1)
+  n <- 20
+  X <- cbind(rnorm(n), rnorm(n))
+  Y <- abs(X[, 1]) + 0.5 * rnorm(n)
+  Xnew <- cbind(rnorm(n), rnorm(n))
+  ml_par_xgb <- list(max_nrounds = 10,
+                     eta = c(0.11, 0.21, 0.31),
+                     max_depth = c(1, 2, 3, 4, 5, 6, 7),
+                     early_stopping_rounds = 8,
+                     k_cv = 8)
+  ml_par_randomForest <- list(num.trees = 10,
+                              num_mtry = 5,
+                              num_min.node.size = 10)
+  fit_par_xgb <- tune_xgboost(Y, X, ml_par = ml_par_xgb)
+  fit_par_randomForest <- tune_randomForest(Y, X, ml_par = ml_par_randomForest)
+  fitted_xgb <- fit_xgboost(Y, X, fit_par_xgb)
+  fitted_randomForest <- fit_randomForest(Y, X, fit_par_randomForest)
+  pred_xgb <- predict_xgboost(Xnew, fitted_xgb)
+  pred_randomForest <- predict_randomForest(Xnew, fitted_randomForest)
+})
 

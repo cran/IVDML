@@ -1,14 +1,14 @@
-4e7d086aa5c390533625832543642e68 *DESCRIPTION
+ba882c39448380169ba07c055b5337b4 *DESCRIPTION
 f7bca8ef2dc8342cff14987d3f11f3bd *NAMESPACE
-17cea855bb1cbf02339df56143193878 *NEWS.md
+4fb71e86aa15c311c3cdc93965734f14 *NEWS.md
 6164a138484bd17c61ba9cbf6e4d0fed *R/IVDML-package.R
-6e91c9a86908f5d8fa51218c37523251 *R/NuisanceML.R
+9a8e63831690dd0fdef064f624403df0 *R/NuisanceML.R
 7496cdd78bae07613e7402aebee892d1 *R/fit_IVDML.R
 f69c6b0d3d9a39fa0e586771b5cedfa8 *R/helpers_IVDML.R
 fa01040be77a1a1290be81c283c8f6bd *R/helpers_methods_IVDML.R
 aa7f767259744e9fd7dae0feb8045dd3 *R/methods_IVDML.R
-2bdca3363775de62fdc845ac950c8187 *README.md
-d08814007735329ff19ffd7fed6c7dbb *build/partial.rdb
+dd03502cb4f07bfcb8b6caa06490a755 *README.md
+d099472a921b18b90eac98e769d07a90 *build/partial.rdb
 06ed33d96a0c64398788bffbd0670d8e *man/IVDML-package.Rd
 6dc17bc52fd12262920e4dc6f61b4c43 *man/bandwidth_normal.Rd
 c9eeaca797e63fed2deba4441cd32260 *man/coef.IVDML.Rd
@@ -20,5 +20,5 @@ a217cb9fd206ef3300a4836e4d6a93fd *man/print.IVDML.Rd
 99e8367dc0a8c82a138bdc7c3307e7ed *man/se.Rd
 b43067b7407362a8de6f25f01970b415 *man/standard_confint.Rd
 1c6b46b572775f534bd3d5a927899847 *tests/testthat.R
-ebf813b22f0858e1220a2022db40cbe4 *tests/testthat/test-fit_IVDML.R
+8ec647cc0ece0353d6b58270fcc6a4d3 *tests/testthat/test-fit_IVDML.R
 de1dac75d592e5dedc3dfc2755cc1fe4 *tests/testthat/test-methods_IVDML.R

@@ -50,8 +50,8 @@ $K(t) = \exp(-t^2/2)/\sqrt{2 \pi}$ ) to estimate the conditional
 expectations given $A_i = a$.
 
 For a detailed discussion of the method, we refer to Scheidegger, Guo
-and Bühlmann (2025). We now demonstrate, how the IVDML package is used
-in practice.
+and Bühlmann (2025). We now demonstrate how the IVDML package is used in
+practice.
 
 ## Installation
 

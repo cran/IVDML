@@ -101,8 +101,8 @@ tune_xgboost <- function(Y, X, ml_par){
 # output: fitted xgboost object of Y vs. X
 fit_xgboost <- function(Y, X, fit_par){
   dtrain <- xgboost::xgb.DMatrix(data = as.matrix(X), label = Y, nthread = 1)
-  mod <-  xgboost::xgboost(params = list(nthread = 1, eta =  fit_par$eta, max_depth = fit_par$max_depth),
-                  data = dtrain, nrounds = fit_par$nrounds, verbose = FALSE)
+  mod <- xgboost::xgb.train(params = list(nthread = 1, eta =  fit_par$eta, max_depth = fit_par$max_depth),
+                               data = dtrain, nrounds = fit_par$nrounds, verbose = FALSE)
   return(mod)
 }
 
